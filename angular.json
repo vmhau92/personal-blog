@@ -30,17 +30,22 @@
             ],
             "styles": [
               "src/styles.scss",
+             
               {
-                  "input": "node_modules/bootstrap/dist/css/bootstrap.min.css"
+                "input": "node_modules/bootstrap/dist/css/bootstrap.min.css"
               },
               {
-                "input": "src/swiper.css"
+                "input": "src/css/bootstrap.min.css"
               },
               {
-                "input": "src/font-awesome.css"
+                "input": "src/css/swiper.css"
+              },
+              {
+                "input": "src/css/font-awesome.css"
               }
             ],
             "scripts": [
+              "src/js/bootstrap.bundle.min.js",
               "src/js/custom.js",
               "src/js/jquery.js",
               "src/js/swiper.js",
