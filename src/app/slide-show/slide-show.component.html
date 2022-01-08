@@ -1,22 +1,13 @@
+<!-- <button (click)="getImage()"> Get image</button> -->
 <div class="container-fluid">
         <div class="row">
-            <div class="col-12">   
+            <div class="col-12">
+                    <!-- <img style="object-fit: cover; max-height: 800px" src="..\images\slideshow\blog-image.jpg" alt="" width="100%">    -->
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                    <div class="carousel-inner" >
+                        <div *ngFor="let img of listImages[0]; let first = first" class="carousel-item" [ngClass]="{'active':first}">
                             <div class="hero-content flex justify-content-center align-items-center flex-column">
-                                <img style="object-fit: cover; max-height: 800px" src="images\_HMV8320_edited.jpg" alt="" width="100%" >
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="hero-content flex justify-content-center align-items-center flex-column">
-                                <img style="object-fit: cover; max-height: 800px" src="images\slider.jpg" alt="" width="100%">
-                            </div>
-                        </div>
-  
-                        <div class="carousel-item">
-                            <div class="hero-content flex justify-content-center align-items-center flex-column">
-                                <img style="object-fit: cover; max-height: 800px" src="images\blog-image.jpg" alt="" width="100%">
+                                <img style="object-fit: cover; max-height: 800px" [src]="sanitizeImageUrl(img)" alt="" width="100%" >
                             </div>
                         </div>
                     </div>
@@ -32,7 +23,7 @@
                 </div>
             </div><!-- .col -->
         </div><!-- .row -->
-  
+        <!-- <img src={{imgname}} alt=""> -->
 
         <!-- subcribe -->
         <div class="container">
